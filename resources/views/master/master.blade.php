@@ -41,7 +41,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
                             &times;</button>
                         <h4 class="modal-title" id="myModalLabel">
-                            Online Recharge</h4>
+                            Pelaporan Online</h4>
                     </div>
                     <div class="modal-body">
                         <div class="row">
@@ -236,7 +236,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="w3l-footer-bottom">
         <div class="container-fluid">
             <div class="col-md-4 w3-footer-logo">
-                <h2><a href="index.html">ONLINE RECHARGE</a></h2>
+                <h2><a href="index.html">PELAPORAN ONLINE</a></h2>
             </div>
             <div class="col-md-8 agileits-footer-class">
                 <p >© 2017 Online Recharge. All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
