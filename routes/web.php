@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('pelaporan');
 });
+
+Route::get('/coba','cobaController@create');
+Route::get('/map','DataPelaporanController@index');

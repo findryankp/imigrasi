@@ -19,6 +19,8 @@
     <!-- Custom CSS -->
     <link href="wrapkit/css/style.css" rel="stylesheet">
     <link href="wrapkit/css/index-landingpage/landing-page.css" rel="stylesheet">
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKZ_EO7i_GnSTbyGarNz8g1c6JqlXcho4&callback=initMap"
+  type="text/javascript"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
