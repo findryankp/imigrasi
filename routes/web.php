@@ -17,3 +17,7 @@ Route::get('/', function () {
 
 Route::get('/coba','cobaController@create');
 Route::get('/map','DataPelaporanController@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

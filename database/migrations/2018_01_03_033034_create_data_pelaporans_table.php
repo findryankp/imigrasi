@@ -15,6 +15,10 @@ class CreateDataPelaporansTable extends Migration
     {
         Schema::create('data_pelaporans', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('keterangan');
+            $table->string('noTelp');
+            $table->string('lokasi');
+            $table->string('foto');
             $table->timestamps();
         });
     }

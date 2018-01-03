@@ -15,7 +15,7 @@ class DataPelaporanController extends Controller
      */
     public function index()
     {
-        Mapper::map(53.381128999999990000, -1.470085000000040000);
+        Mapper::map(0,0);
 
         return view('map');
     }
@@ -38,7 +38,10 @@ class DataPelaporanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Image::make($avatar)->resize(400,400)->save(public_path('/uploads/avatar/'.$request->foto));
+        DataPelaporan::create([
+
+            ]);
     }
 
     /**
