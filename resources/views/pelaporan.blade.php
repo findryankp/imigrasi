@@ -24,8 +24,11 @@
                               <div class="login-form">  
                         <form action="pay.html" method="post" id="signup">
                         <ol>
-                            <li>
-                                <h2><i class="icon fa fa-camera" style="color:#00CED1;"></i>&nbsp;&nbsp;Foto</h2>
+                            <li class="text-right">
+                                <button type="button" class="submit">
+                                    <span style="color:black;" class="icon fa fa-camera"></span>
+                                </button>
+                                <h4>Ambil gambar</h4>
                             </li>
 
                             <li>
