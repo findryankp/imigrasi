@@ -23,9 +23,13 @@
                     <div id="tab1" class="tab-grid">  
                               <div class="login-form">  
                         <form action="pay.html" method="post" id="signup">
-                        <ol>                            
+                        <ol>
                             <li>
-                                <h4><i class="icon fa fa-phone-square" style="color:blue;"></i>Nomer HP</h4>
+                                <h2><i class="icon fa fa-camera" style="color:#00CED1;"></i>&nbsp;&nbsp;Foto</h2>
+                            </li>
+
+                            <li>
+                                <h4><i class="icon fa fa-phone-square" style="color:#00CED1;"></i>&nbsp;&nbsp;Nomer HP</h4>
                                 <input type="number" id="tel" name="tel" pattern="\d{10}" placeholder="Nomer HP" required="required" />
                                 <p class="validation01">
                                     <span class="invalid">Masukan nomer</span>
@@ -34,7 +38,7 @@
                             </li>
                            
                             <li>
-                                <h4><i class="fa fa-map" aria-hidden="true" style="color:blue"></i>Lokasi</h4>
+                                <h4><i class="icon fa fa-map-marker" aria-hidden="true" style="color:#00CED1"></i>Lokasi</h4>
                                 <input type="text" id="tel" name="tel" pattern="\d{10}" placeholder="Lokasi" required="required" />
                                 <p class="validation01">
                                     <span class="invalid">Masukan Lokasi Keadian</span>
@@ -42,7 +46,7 @@
                             </li>
 
                             <li>
-                                <h4><i class="fa fa-pencil-square-o" aria-hidden="true" style="color:blue"></i>Keterangan</h4>
+                                <h4><i class="fa fa-pencil-square-o" aria-hidden="true" style="color:#00CED1"></i>&nbsp;&nbsp;Keterangan</h4>
                                 <textarea style="opacity: 0.7;" class="form-control" rows="3" placeholder="Tulis Keterangan"></textarea>
                                 <p class="validation01">
                                     <span class="invalid">Keterangan</span>
