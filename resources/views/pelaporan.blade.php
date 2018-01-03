@@ -5,60 +5,85 @@
 @stop
 
 @section('content')
-    <div id="main-wrapper">
-        <!-- Page wrapper  -->
-        <!-- ============================================================== -->
-        <div class="page-wrapper">
-            <!-- ============================================================== -->
-            <!-- Container fluid  -->
-            <!-- ============================================================== -->
-            <div class="container-fluid">
-                <!-- ============================================================== -->
-                <div class="static-slider10" style="background-image:url(assets/images/slide_12_1463126003.png)">
-                    <div class="container">
-                        <!-- Row  -->
-                        <div class="row fade-left-content-center ">
-                            <!-- <a class="btn btn-outline-light btn-rounded btn-md btn-arrow m-t-20" data-toggle="collapse" href=""><h4><span>Pelaporan <i class="ti-arrow-right"></i></span></h4></a> -->
-                            
-                            <h5 class="title responsive">  Pelaporan</h5>
-                            <form data-aos="fade-left" data-aos-duration="1200">
-                                <div class="row">
-                                    <div class="col-md-12 col-lg-12 col-sm-8">
-                                        <div class="form-group m-t-15">
-                                            <img src="assets/images/team/t3.jpg" class="img-responsive">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12 col-lg-12 col-sm-8">
-                                        <div class="form-group m-t-15">
-                                            <input style="opacity: 0.7;" class="form-control" type="text" placeholder="nomer HP">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12 col-lg-12 col-sm-8">
-                                        <div class="form-group m-t-15">
-                                            <input style="opacity: 0.7;" class="form-control" type="text" placeholder="alamat" disabled>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12 col-lg-12 col-sm-8">
-                                        <div class="form-group m-t-15">
-                                            <textarea style="opacity: 0.7;" class="form-control" rows="3" placeholder="keterangan"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12 col-lg-12 col-sm-8">
-                                        <button type="submit" class="btn btn-success-gradiant font-17 btn-arrow"><span> Laporkan <i class="ti-arrow-right"></i></span></button>
-                                    </div>
-                                </div>
-                            </form>
+   <div class="categories-section main-grid-border" id="mobilew3layouts">
+        <div class="container">
+            <div class="category-list">
+                <div id="parentVerticalTab">
+                    <div class="agileits-tab_nav">
+                    <ul class="resp-tabs-list hor_1">
+                        <li><i class="icon fa fa-mobile" aria-hidden="true"></i>Lapor</li>
+                    </ul>
+                    </div>
+                    <div class="resp-tabs-container hor_1">
+                        <!-- tab1 -->
+                        <div>
+                            <div class="tabs-box">
+                 <div class="clearfix"> </div>
+                 <div class="tab-grids">
+                    <div id="tab1" class="tab-grid">  
+                              <div class="login-form">  
+                        <form action="pay.html" method="post" id="signup">
+                        <ol>                            
+                            <li>
+                                <h4><i class="icon fa fa-phone-square" style="color:blue;"></i>Nomer HP</h4>
+                                <input type="number" id="tel" name="tel" pattern="\d{10}" placeholder="Nomer HP" required="required" />
+                                <p class="validation01">
+                                    <span class="invalid">Masukan nomer</span>
+                                    <span class="valid">Benar</span>
+                                </p>
+                            </li>
+                           
+                            <li>
+                                <h4><i class="fa fa-map" aria-hidden="true" style="color:blue"></i>Lokasi</h4>
+                                <input type="text" id="tel" name="tel" pattern="\d{10}" placeholder="Lokasi" required="required" />
+                                <p class="validation01">
+                                    <span class="invalid">Masukan Lokasi Keadian</span>
+                                </p>
+                            </li>
 
-                        </div>
+                            <li>
+                                <h4><i class="fa fa-pencil-square-o" aria-hidden="true" style="color:blue"></i>Keterangan</h4>
+                                <textarea style="opacity: 0.7;" class="form-control" rows="3" placeholder="Tulis Keterangan"></textarea>
+                                <p class="validation01">
+                                    <span class="invalid">Keterangan</span>
+                                    <span class="valid">Benar</span>
+                                </p>
+                            </li>
+
+                            <li>
+                                <input type="submit" class="submit" value="Laporkan" />
+                            </li>
+                        </ol>
+                        </form> 
+                                                                                            
+                        </div>  
+
                     </div>
                 </div>
-                <!-- ============================================================== -->
-            </div>
-            <!-- ============================================================== -->
-            <a class="bt-top btn btn-circle btn-lg btn-info" href="#top"><i class="ti-arrow-up"></i></a>
+            
+            <div class="clearfix"> </div>
         </div>
-        
-        <!-- ============================================================== -->
+    <!-- script -->
+        <script>
+            $(document).ready(function() {
+                $("#tab2").hide();
+                $("#tab3").hide();
+                $("#tab4").hide();
+                $(".tabs-menu a").click(function(event){
+                    event.preventDefault();
+                    var tab=$(this).attr("href");
+                    $(".tab-grid").not(tab).css("display","none");
+                    $(tab).fadeIn("slow");
+                });
+            });
+        </script>
+                        
+    </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
     </div>
 @stop
 
