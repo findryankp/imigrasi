@@ -40,6 +40,7 @@
                         <form action="{{URL::to('/')}}" enctype="data/multipart" method="POST" id="signup">
                         {{csrf_field()}}
                         <ol>
+<<<<<<< Updated upstream
                             <li>
                                 <h4><i class="fa fa-pencil-square-o" aria-hidden="true" style="color:#00CED1"></i>&nbsp;&nbsp;Keterangan</h4>
                                 <textarea style="opacity: 0.7;" name="keterangan" class="form-control" rows="3" placeholder="Tulis Keterangan"></textarea>
@@ -47,6 +48,14 @@
                                     <span class="invalid">Keterangan</span>
                                     <span class="valid">Benar</span>
                                 </p>
+=======
+                            <li class="text-right">
+                                <!-- <button type="button" class="submit">
+                                    <span style="color:black;" class="icon fa fa-camera"></span>
+                                </button> -->
+                                <input class="submit" type="file" name="foto" accept="image/*" capture="camera">
+                                <h4>Ambil gambar</h4>
+>>>>>>> Stashed changes
                             </li>
                             <li>
                                 <h4><i class="icon fa fa-phone-square" style="color:#00CED1;"></i>&nbsp;&nbsp;Nomer HP</h4>
@@ -56,15 +65,28 @@
                                     <span class="valid">Benar</span>
                                 </p>
                             </li>
+<<<<<<< Updated upstream
                             
                             
                            
                             <li>
                                 <h4><i class="fa fa-pencil-square-o" aria-hidden="true" style="color:#00CED1"></i>&nbsp;&nbsp;Lokasi</h4>
                                 <input type="text" id="lokasi" name="lokasi" placeholder="Lokasi">
+=======
+                            <li>
+                                <h4><i class="fa fa-pencil-square-o" aria-hidden="true" style="color:#00CED1"></i>&nbsp;&nbsp;Lokasi</h4>
+                                <h4 id="lokasi2"></h4>
+                                <input type="hidden" id="tel" name="lokasi" placeholder="Lokasi">
+                                <input type="text" id="tel" name="ketlok"  placeholder="Keterangan Lokasi" required="required" />
+>>>>>>> Stashed changes
                             </li>
 
+                            <!-- <li>
+                                <h4><i class="fa fa-pencil-square-o" aria-hidden="true" style="color:#00CED1"></i>&nbsp;&nbsp;Keterangan Lokasi</h4>
+                                <input type="text" id="tel" name="ketlok"  placeholder="Keterangan Lokasi" required="required" />
+                            </li> -->
                             <li>
+<<<<<<< Updated upstream
                                 <h4><i class="fa fa-pencil-square-o" aria-hidden="true" style="color:#00CED1"></i>&nbsp;&nbsp;Keterangan Lokasi</h4>
                                 <input type="text" id="tel" name="ketlok"  placeholder="Keterangan Lokasi" required="required" />
                             </li>
@@ -78,6 +100,15 @@
                             </li>
 
 
+=======
+                                <h4><i class="fa fa-pencil-square-o" aria-hidden="true" style="color:#00CED1"></i>&nbsp;&nbsp;Keterangan</h4>
+                                <textarea style="opacity: 0.7;" name="keterangan" class="form-control" rows="3" placeholder="Tulis Keterangan"></textarea>
+                                <p class="validation01">
+                                    <span class="invalid">Keterangan</span>
+                                    <span class="valid">Benar</span>
+                                </p>
+                            </li>
+>>>>>>> Stashed changes
                             <li>
                                 <input style="color: black;" type="submit" class="submit" value="Laporkan" />
                             </li>

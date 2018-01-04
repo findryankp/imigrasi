@@ -81,13 +81,23 @@
             
 
             infowindow.open(map, marker);
+<<<<<<< Updated upstream
             
+=======
+            var alamat_len=results[0].address_components.length;
+            console.log(results[0].address_components[0].short_name);
+            var alamat_=""
+>>>>>>> Stashed changes
             for (var i=0;i<alamat_len-2;i+=1){
               if (i==alamat_len-3)
                   alamat_+=results[0].address_components[i].short_name
               else    
                   alamat_+=results[0].address_components[i].short_name+", "
             }
+<<<<<<< Updated upstream
+=======
+            $('#lokasi').val(alamat_);
+>>>>>>> Stashed changes
           } 
           else 
           {

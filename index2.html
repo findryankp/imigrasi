@@ -5,6 +5,26 @@
     <meta charset="utf-8">
     <title>Reverse Geocoding</title>
     <style>
+
+    .fileContainer {
+    overflow: hidden;
+    position: relative;
+}
+
+.fileContainer [type=file] {
+    cursor: inherit;
+    display: block;
+    font-size: 999px;
+    filter: alpha(opacity=0);
+    min-height: 100%;
+    min-width: 100%;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 0;
+}
+
       #map {
         height: 100%;
       }
@@ -45,7 +65,15 @@
     <script src="jquery-3.2.1.min.js"></script>
   </head>
   <body>
+    <div id="lokasi2">
+      <input type="text" name="Lokasi" placeholder="hahaha">
+    </div>
     
+    <label class="fileContainer">
+    Click here to trigger the file uploader!
+    <input type="file"/>
+</label>
+
     <div id="floating-panel">
         <!-- <input id="latlng" type="text" value="-7.2606,112.7466"> -->
       <input id="submit" type="button" value="Reverse Geocode">
@@ -73,6 +101,7 @@
     {
         var lati = position.coords.latitude;
         var longi = position.coords.longitude;
+
         var map = new google.maps.Map(document.getElementById('map'), 
         {
           zoom: 18,
@@ -111,6 +140,7 @@
       var latlng = {lat: lati, lng: longi};
       geocoder.geocode({'location': latlng}, function(results, status)
       {
+        var aa=results[0].toString();
         if (status === 'OK') 
         {
           if (results[0]) 
@@ -122,6 +152,7 @@
             });
             infowindow.setContent(results[0].formatted_address);
             infowindow.open(map, marker);
+<<<<<<< Updated upstream
             var alamat_len=results[0].address_components.length;
             console.log(results[0].address_components[0].short_name);
             var alamat_=""
@@ -133,6 +164,9 @@
             }
             console.log(alamat_);
             console.log(typeof alamat_);
+=======
+
+>>>>>>> Stashed changes
           } 
           else 
           {
@@ -144,8 +178,13 @@
           window.alert('Geocoder failed due to: ' + status);
         }
       });
+<<<<<<< Updated upstream
 
 
+=======
+      
+      console.log(typeof aa);
+>>>>>>> Stashed changes
     }
     </script>
     <script async defer
