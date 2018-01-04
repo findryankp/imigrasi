@@ -64,7 +64,6 @@
 
     function geocodeLatLng(geocoder, map, infowindow, lati, longi)
     {
-      var alamat_="";
       var latlng = {lat: lati, lng: longi};
       geocoder.geocode({'location': latlng}, function(results, status)
       {
@@ -81,6 +80,11 @@
             
 
             infowindow.open(map, marker);
+<<<<<<< HEAD
+            var alamat_len=results[0].address_components.length;
+            console.log(results[0].address_components[0].short_name);
+            var alamat_=""
+=======
 <<<<<<< Updated upstream
             
 =======
@@ -88,16 +92,24 @@
             console.log(results[0].address_components[0].short_name);
             var alamat_=""
 >>>>>>> Stashed changes
+>>>>>>> 2ce983c2c319ae9ad7c1c7b2cbffcdba7b32e6a7
             for (var i=0;i<alamat_len-2;i+=1){
               if (i==alamat_len-3)
                   alamat_+=results[0].address_components[i].short_name
               else    
                   alamat_+=results[0].address_components[i].short_name+", "
             }
+<<<<<<< HEAD
+            console.log(alamat_);
+            console.log(typeof alamat_);
+            $('#lokasi').val(alamat_);
+            $('#lokasi2').append(alamat_);
+=======
 <<<<<<< Updated upstream
 =======
             $('#lokasi').val(alamat_);
 >>>>>>> Stashed changes
+>>>>>>> 2ce983c2c319ae9ad7c1c7b2cbffcdba7b32e6a7
           } 
           else 
           {
@@ -109,8 +121,6 @@
           window.alert('Geocoder failed due to: ' + status);
         }
       });
-    var cobaa="hehe"
-    $('#lokasi').val(alamat_);  
     }
     
     </script>

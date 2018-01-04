@@ -5,7 +5,8 @@ namespace App\Http\Controllers;
 use App\DataPelaporan;
 use Illuminate\Http\Request;
 use Mapper;
-
+use Image;
+use File;
 class DataPelaporanController extends Controller
 {
     /**
@@ -39,7 +40,9 @@ class DataPelaporanController extends Controller
      */
     public function store(Request $request)
     {
-        // Image::make($avatar)->resize(400,400)->save(public_path('/uploads/avatar/'.$request->foto));
+        $foto=$request->file('foto');
+        $filename=time().".".$foto->getClientOriginalExtension();
+        Image::make($foto)->save(public_path('/uploads/resources/'.$filename));
         DataPelaporan::create($request->all());
         return view('pelaporan');
     }
