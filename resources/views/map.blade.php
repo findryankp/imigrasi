@@ -2,69 +2,121 @@
 @section('title') Pelaporan
 @stop
 @section('head')
+    <style>
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body 
+      {
+        height: 100%;
+      }
+     
+     #latlng {
+        width: 225px;
+      }
+    </style>
 @stop
 
 @section('content')
 
-
-<p id="tampilkan"></p>
-<p>Cek lokasi anda! >> <button onclick="getLocation()">Cek</button></p>
- 
-<div id="mapcanvas"></div>
-</center>
-{!! Mapper::render() !!}
+     <div id="floating-panel">
+        <!-- <input id="latlng" type="text" value="-7.2606,112.7466"> -->
+      <input id="submit" type="button" value="Reverse Geocode">
+    </div>
+    <script src="http://maps.google.com/maps/api/js"></script>
+    <div id="map"></div>
+<!-- {!! Mapper::render() !!} -->
 
 <script>
-var view = document.getElementById("tampilkan");
-function getLocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition, showError);
-    } else {
-        view.innerHTML = "Yah browsernya ngga support Geolocation bro!";
+    function initMap() 
+    {
+      getLocation();
     }
-}
- 
-function showPosition(position) {
-    lat = position.coords.latitude;
-    lon = position.coords.longitude;
-    view.innerHTML = "Latitude: " + position.coords.latitude + 
-    "<br>Longitude: " + position.coords.longitude;
-    latlon = new google.maps.LatLng(lat, lon)
-    mapcanvas = document.getElementById('mapcanvas')
-    mapcanvas.style.height = '500px';
-    mapcanvas.style.width = '500px';
- 
-    var myOptions = {
-    center:latlon,
-    zoom:14,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
+
+    function getLocation() 
+    {
+        if (navigator.geolocation)
+        {
+            navigator.geolocation.getCurrentPosition(showPosition2, showError);
+        }
+        else 
+        {
+            view.innerHTML = "Yah browsernya ngga support Geolocation bro!";
+        }
+
     }
-     
-    var map = new google.maps.Map(document.getElementById("mapcanvas"), myOptions);
-    var marker = new google.maps.Marker({
-        position:latlon,
-        map:map,
-        title:"You are here!"
-    });
-}
+
+    function showPosition2(position) 
+    {
+        var lati = position.coords.latitude;
+        var longi = position.coords.longitude;
+        var map = new google.maps.Map(document.getElementById('map'), 
+        {
+          zoom: 18,
+          center: {lat: lati, lng: longi}
+        });
+        var geocoder = new google.maps.Geocoder;
+        var infowindow = new google.maps.InfoWindow;
+
+        document.getElementById('submit').addEventListener('click', function() 
+        {
+          geocodeLatLng(geocoder, map, infowindow, lati, longi);
+        });
+    }
  
-function showError(error) {
-    switch(error.code) {
+    function showError(error) 
+    {
+      switch(error.code)
+      {
         case error.PERMISSION_DENIED:
-            view.innerHTML = "Yah, mau deteksi lokasi tapi ga boleh :("
-            break;
+          view.innerHTML = "Yah, mau deteksi lokasi tapi ga boleh :("
+          break;
         case error.POSITION_UNAVAILABLE:
-            view.innerHTML = "Yah, Info lokasimu nggak bisa ditemukan nih"
-            break;
+          view.innerHTML = "Yah, Info lokasimu nggak bisa ditemukan nih"
+          break;
         case error.TIMEOUT:
-            view.innerHTML = "Requestnya timeout bro"
-            break;
+          view.innerHTML = "Requestnya timeout bro"
+          break;
         case error.UNKNOWN_ERROR:
-            view.innerHTML = "An unknown error occurred."
-            break;
+          view.innerHTML = "An unknown error occurred."
+          break;
+      }
     }
- }
-</script>
+
+    function geocodeLatLng(geocoder, map, infowindow, lati, longi)
+    {
+      var latlng = {lat: lati, lng: longi};
+      geocoder.geocode({'location': latlng}, function(results, status)
+      {
+        if (status === 'OK') 
+        {
+          if (results[1]) 
+          {
+            map.setZoom(18);
+            var marker = new google.maps.Marker({
+              position: latlng,
+              map: map
+            });
+            infowindow.setContent(results[1].formatted_address);
+            var coba = infowindow.setContent(results[1].formatted_address);
+            infowindow.open(map, marker);
+          } 
+          else 
+          {
+            window.alert('No results found');
+          }
+        } 
+        else 
+        {
+          window.alert('Geocoder failed due to: ' + status);
+        }
+      });
+    }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKZ_EO7i_GnSTbyGarNz8g1c6JqlXcho4&callback=initMap">
+    </script>
 
 @stop
 

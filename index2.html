@@ -115,12 +115,13 @@
         {
           if (results[1]) 
           {
-            map.setZoom(11);
+            map.setZoom(18);
             var marker = new google.maps.Marker({
               position: latlng,
               map: map
             });
             infowindow.setContent(results[1].formatted_address);
+            var coba = infowindow.setContent(results[1].formatted_address);
             infowindow.open(map, marker);
           } 
           else 
@@ -138,5 +139,6 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKZ_EO7i_GnSTbyGarNz8g1c6JqlXcho4&callback=initMap">
     </script>
+
   </body>
 </html>

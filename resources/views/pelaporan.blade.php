@@ -42,10 +42,8 @@
                            
                             <li>
                                 <h4><i class="icon fa fa-map-marker" aria-hidden="true" style="color:#00CED1"></i>Lokasi</h4>
-                                <input type="text" id="tel" name="tel" pattern="\d{10}" placeholder="Lokasi" required="required" />
-                                <p class="validation01">
-                                    <span class="invalid">Masukan Lokasi Keadian</span>
-                                </p>
+                                <input type="hidden" id="tel" name="tel" pattern="\d{10}" placeholder="Lokasi" required="required" />
+                                <h4>Jl. R.A Kartini &nbsp;&nbsp; <input id="submit" type="button" value="Cek Lokasi"></h4>
                             </li>
 
                             <li>
@@ -58,7 +56,7 @@
                             </li>
 
                             <li>
-                                <input type="submit" class="submit" value="Laporkan" />
+                                <input style="color: black;" type="submit" class="submit" value="Laporkan" />
                             </li>
                         </ol>
                         </form> 
