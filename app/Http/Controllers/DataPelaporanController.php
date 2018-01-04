@@ -15,11 +15,12 @@ class DataPelaporanController extends Controller
      */
     public function index()
     {
-        Mapper::map(0,0);
-
-        return view('map');
+        return view('pelaporan');
     }
-
+    public function wel()
+    {
+        return view('welcome');
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -38,10 +39,9 @@ class DataPelaporanController extends Controller
      */
     public function store(Request $request)
     {
-        Image::make($avatar)->resize(400,400)->save(public_path('/uploads/avatar/'.$request->foto));
-        DataPelaporan::create([
-
-            ]);
+        // Image::make($avatar)->resize(400,400)->save(public_path('/uploads/avatar/'.$request->foto));
+        DataPelaporan::create($request->all());
+        return view('pelaporan');
     }
 
     /**

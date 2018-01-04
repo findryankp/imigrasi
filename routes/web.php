@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('pelaporan');
-});
+Route::get('/','DataPelaporanController@index')->name('pelaporan');
+Route::get('/lapor','DataPelaporanController@wel');
+Route::post('/','DataPelaporanController@store');
+Route::post('/','DataPelaporanController@store')->name('submit.pelaporan');
 
 Route::get('/coba', function () {
     return view('ceklaporan');

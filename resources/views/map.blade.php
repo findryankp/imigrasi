@@ -1,5 +1,5 @@
 <div id="floating-panel">
-    <input id="submit" type="button" value="Reverse Geocode">
+    <input id="submit_lokasi" type="button" value="Reverse Geocode">
 </div>
 <script src="http://maps.google.com/maps/api/js"></script>
 <div id="map"></div>
@@ -36,9 +36,10 @@
         var geocoder = new google.maps.Geocoder;
         var infowindow = new google.maps.InfoWindow;
 
-        document.getElementById('submit').addEventListener('click', function() 
+        document.getElementById('submit_lokasi').addEventListener('click', function() 
         {
           geocodeLatLng(geocoder, map, infowindow, lati, longi);
+          
         });
     }
  
@@ -63,6 +64,7 @@
 
     function geocodeLatLng(geocoder, map, infowindow, lati, longi)
     {
+      var alamat_="";
       var latlng = {lat: lati, lng: longi};
       geocoder.geocode({'location': latlng}, function(results, status)
       {
@@ -75,9 +77,17 @@
               position: latlng,
               map: map
             });
-            infowindow.setContent(results[1].formatted_address);
-            var coba = infowindow.setContent(results[1].formatted_address);
+            infowindow.setContent(results[0].formatted_address);
+            
+
             infowindow.open(map, marker);
+            
+            for (var i=0;i<alamat_len-2;i+=1){
+              if (i==alamat_len-3)
+                  alamat_+=results[0].address_components[i].short_name
+              else    
+                  alamat_+=results[0].address_components[i].short_name+", "
+            }
           } 
           else 
           {
@@ -89,7 +99,10 @@
           window.alert('Geocoder failed due to: ' + status);
         }
       });
+    var cobaa="hehe"
+    $('#lokasi').val(alamat_);  
     }
+    
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKZ_EO7i_GnSTbyGarNz8g1c6JqlXcho4&callback=initMap">

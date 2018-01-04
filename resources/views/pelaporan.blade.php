@@ -37,38 +37,46 @@
                  <div class="tab-grids">
                     <div id="tab1" class="tab-grid">  
                               <div class="login-form">  
-                        <form action="pay.html" method="post" id="signup">
+                        <form action="{{URL::to('/')}}" enctype="data/multipart" method="POST" id="signup">
+                        {{csrf_field()}}
                         <ol>
-                            <li class="text-right">
-                                <button type="button" class="submit">
-                                    <span style="color:black;" class="icon fa fa-camera"></span>
-                                </button>
-                                <h4>Ambil gambar</h4>
-                            </li>
-
-                            <li>
-                                <h4><i class="icon fa fa-phone-square" style="color:#00CED1;"></i>&nbsp;&nbsp;Nomer HP</h4>
-                                <input type="number" id="tel" name="tel" pattern="\d{10}" placeholder="Nomer HP" required="required" />
-                                <p class="validation01">
-                                    <span class="invalid">Masukan nomer</span>
-                                    <span class="valid">Benar</span>
-                                </p>
-                            </li>
-                           
-                            <li>
-                                <h4><i class="icon fa fa-map-marker" aria-hidden="true" style="color:#00CED1"></i>Lokasi</h4>
-                                <input type="hidden" id="tel" name="tel" pattern="\d{10}" placeholder="Lokasi" required="required" />
-                                <h4>Jl. R.A Kartini &nbsp;&nbsp; <input id="submit" type="button" value="Cek Lokasi"></h4>
-                            </li>
-
                             <li>
                                 <h4><i class="fa fa-pencil-square-o" aria-hidden="true" style="color:#00CED1"></i>&nbsp;&nbsp;Keterangan</h4>
-                                <textarea style="opacity: 0.7;" class="form-control" rows="3" placeholder="Tulis Keterangan"></textarea>
+                                <textarea style="opacity: 0.7;" name="keterangan" class="form-control" rows="3" placeholder="Tulis Keterangan"></textarea>
                                 <p class="validation01">
                                     <span class="invalid">Keterangan</span>
                                     <span class="valid">Benar</span>
                                 </p>
                             </li>
+                            <li>
+                                <h4><i class="icon fa fa-phone-square" style="color:#00CED1;"></i>&nbsp;&nbsp;Nomer HP</h4>
+                                <input type="number" id="tel" name="noTelp" pattern="\d{10}" placeholder="Nomor HP" required="required" />
+                                <p class="validation01">
+                                    <span class="invalid">Masukan nomor</span>
+                                    <span class="valid">Benar</span>
+                                </p>
+                            </li>
+                            
+                            
+                           
+                            <li>
+                                <h4><i class="fa fa-pencil-square-o" aria-hidden="true" style="color:#00CED1"></i>&nbsp;&nbsp;Lokasi</h4>
+                                <input type="text" id="lokasi" name="lokasi" placeholder="Lokasi">
+                            </li>
+
+                            <li>
+                                <h4><i class="fa fa-pencil-square-o" aria-hidden="true" style="color:#00CED1"></i>&nbsp;&nbsp;Keterangan Lokasi</h4>
+                                <input type="text" id="tel" name="ketlok"  placeholder="Keterangan Lokasi" required="required" />
+                            </li>
+
+                            <li class="text-right">
+                                <!-- <button type="button" class="submit">
+                                    <span style="color:black;" class="icon fa fa-camera"></span>
+                                </button> -->
+                                <input class="submit" type="file" name="foto" accept="image/*" capture="camera">
+                                <h4>Ambil gambar</h4>
+                            </li>
+
 
                             <li>
                                 <input style="color: black;" type="submit" class="submit" value="Laporkan" />
@@ -94,6 +102,9 @@
                     var tab=$(this).attr("href");
                     $(".tab-grid").not(tab).css("display","none");
                     $(tab).fadeIn("slow");
+                });
+                $('#cobahehe').click(function(){
+                    $('#lokasi').val("Glenn Quagmire");
                 });
             });
         </script>

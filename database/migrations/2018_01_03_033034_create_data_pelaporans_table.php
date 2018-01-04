@@ -18,6 +18,7 @@ class CreateDataPelaporansTable extends Migration
             $table->string('keterangan');
             $table->string('noTelp');
             $table->string('lokasi');
+            $table->string('ketlok');
             $table->string('foto');
             $table->timestamps();
         });
