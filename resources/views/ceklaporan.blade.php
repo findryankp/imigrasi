@@ -5,7 +5,7 @@
 @stop
 
 @section('content')
-    <div class="agile-movies w3layouts-content">
+    <div class="agile-movies w3layouts-content" id="hehe">
         <div class="container">
     <div class="now-showing-movies">
         <h3 class="m-head">List Laporan</h3>

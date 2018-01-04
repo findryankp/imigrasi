@@ -44,7 +44,7 @@
                  <div class="tab-grids">
                     <div id="tab1" class="tab-grid">  
                               <div class="login-form">  
-                        <form action="{{URL::to('/')}}" enctype="data/multipart" method="POST" id="signup">
+                        <form  enctype="multipart/form-data" method="POST" id="signup" action="{{route('pelaporans')}}">
                         {{csrf_field()}}
                         <ol>
                             <li class="text-right">
@@ -63,7 +63,6 @@
                                     <span class="valid">Benar</span>
                                 </p>
                             </li>
-
                             <li>
                                 <h4><i class="fa fa-map-marker fa-1x" aria-hidden="true" style="color:#00CED1"></i>&nbsp;&nbsp;Lokasi</h4>
                                 <h4 id="lokasi2"></h4>
@@ -74,6 +73,9 @@
                             </li>
 
                             <li>
+                                <h4><i class="fa fa-pencil-square-o" aria-hidden="true" style="color:#00CED1"></i>&nbsp;&nbsp;Keterangan Lokasi</h4>
+                                <input type="text" id="tel" name="ketlok"  placeholder="Keterangan Lokasi" required="required" />
+                            </li>
                                 <h4><i class="fa fa-pencil-square-o" aria-hidden="true" style="color:#00CED1"></i>&nbsp;&nbsp;Keterangan</h4>
                                 <textarea style="opacity: 0.7;" name="keterangan" class="form-control" rows="3" placeholder="Tulis Keterangan"></textarea>
                                 <p class="validation01">
