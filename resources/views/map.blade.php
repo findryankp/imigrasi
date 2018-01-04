@@ -1,31 +1,8 @@
-@extends('master.master')
-@section('title') Pelaporan
-@stop
-@section('head')
-    <style>
-      #map {
-        height: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body 
-      {
-        height: 100%;
-      }
-     
-     #latlng {
-        width: 225px;
-      }
-    </style>
-@stop
-
-@section('content')
-
-     <div id="floating-panel">
-        <!-- <input id="latlng" type="text" value="-7.2606,112.7466"> -->
-      <input id="submit" type="button" value="Reverse Geocode">
-    </div>
-    <script src="http://maps.google.com/maps/api/js"></script>
-    <div id="map"></div>
+<div id="floating-panel">
+    <input id="submit" type="button" value="Reverse Geocode">
+</div>
+<script src="http://maps.google.com/maps/api/js"></script>
+<div id="map"></div>
 <!-- {!! Mapper::render() !!} -->
 
 <script>
@@ -117,8 +94,3 @@
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKZ_EO7i_GnSTbyGarNz8g1c6JqlXcho4&callback=initMap">
     </script>
-
-@stop
-
-@section('script')
-@stop

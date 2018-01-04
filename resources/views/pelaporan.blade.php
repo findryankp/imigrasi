@@ -2,9 +2,24 @@
 @section('title') Pelaporan
 @stop
 @section('head')
+    <style>
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body 
+      {
+        height: 100%;
+      }
+     
+     #latlng {
+        width: 225px;
+      }
+    </style>
 @stop
 
 @section('content')
+@include('map')
    <div class="categories-section main-grid-border" id="mobilew3layouts">
         <div class="container">
             <div class="category-list">
