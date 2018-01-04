@@ -52,7 +52,7 @@
                                     <i class="icon fa fa-camera fa-2x" style="color:#00CED1;">&nbsp;&nbsp;&nbsp;&nbsp;</i>
                                     <input class="submit" type="file" name="foto" accept="image/*" capture="camera" hidden>
                                 </label>
-                                <h4 id="camera">Ambil gambar</h4>
+                                <h4 id="camera" class="">Ambil gambar</h4>
                             </li>
 
                             <li>
