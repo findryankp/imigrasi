@@ -4,16 +4,9 @@
 @section('head')
     <style>
       #map {
-        height: 100vh;
-        
-      }
-      /* Optional: Makes the sample page fill the window. */
-      /*html, body 
-      {
-        height: 100vh;
+        height: 60vh;
         width: 100%;
-      }*/
-     
+      }
      #latlng {
         width: 100%;
       }
@@ -70,12 +63,9 @@
                                 <div id="ketlokasi">
                                     <input type="text" id="tel" name="ketlok"  placeholder="Keterangan Lokasi" required="required" />
                                 </div>
+                                <input id="button1" type="button" value="Cek Lokasi">
                             </li>
-
                             <li>
-                                <h4><i class="fa fa-pencil-square-o" aria-hidden="true" style="color:#00CED1"></i>&nbsp;&nbsp;Keterangan Lokasi</h4>
-                                <input type="text" id="tel" name="ketlok"  placeholder="Keterangan Lokasi" required="required" />
-                            </li>
                                 <h4><i class="fa fa-pencil-square-o" aria-hidden="true" style="color:#00CED1"></i>&nbsp;&nbsp;Keterangan</h4>
                                 <textarea style="opacity: 0.7;" name="keterangan" class="form-control" rows="3" placeholder="Tulis Keterangan"></textarea>
                                 <p class="validation01">
@@ -103,7 +93,11 @@
                 $("#tab2").hide();
                 $("#tab3").hide();
                 $("#tab4").hide();
+                $("#map").hide();
                 $('#ketlokasi').hide();
+                $('#button1').click(function(){
+                    $('#map').toggle();
+                });
                 $(".tabs-menu a").click(function(event){
                     event.preventDefault();
                     var tab=$(this).attr("href");
