@@ -14,6 +14,7 @@
 Route::get('/','DataPelaporanController@index')->name('pelaporan');
 Route::get('/lapor','DataPelaporanController@wel');
 Route::post('/','DataPelaporanController@store')->name('pelaporans');
+Route::get('/laporan','DataPelaporanController@show')->name('list.laporan');
 
 
 Route::get('/coba', function () {

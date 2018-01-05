@@ -61,7 +61,8 @@ class DataPelaporanController extends Controller
      */
     public function show(DataPelaporan $dataPelaporan)
     {
-        //
+        $data=DataPelaporan::all();
+        return view('ceklaporan',compact('data'));
     }
 
     /**
