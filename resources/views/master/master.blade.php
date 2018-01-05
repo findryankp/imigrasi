@@ -30,9 +30,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="logo">
                 <h1><a href="index.html">PELAPORAN ONLINE</a></h1>
             </div>
-          <div class="w3layouts-login">
+          <!-- <div class="w3layouts-login">
                 <a data-toggle="modal" data-target="#myModal" href="#"><i class="glyphicon glyphicon-user"> </i>Login/Register</a>
-            </div>    
+            </div>   -->  
                 <div class="clearfix"></div>
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" 
             aria-hidden="true">
@@ -44,15 +44,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <h4 class="modal-title" id="myModalLabel">
                             Pelaporan Online</h4>
                     </div>
-                    <div class="modal-body">
+                    <!-- <div class="modal-body">
                         <div class="row">
                             <div class="col-md-8 extra-w3layouts" style="border-right: 1px dotted #C2C2C2;padding-right: 30px;">
-                                <!-- Nav tabs -->
                                 <ul class="nav nav-tabs">
                                     <li class="active"><a href="#Login" data-toggle="tab">Login</a></li>
                                     <li><a href="#Registration" data-toggle="tab">Register</a></li>
                                 </ul>
-                                <!-- Tab panes -->
                                 <div class="tab-content">
                                     <div class="tab-pane active" id="Login">
                                         <form  class="form-horizontal" action="#" method="get">
@@ -153,7 +151,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     
                 </div>
@@ -250,7 +248,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     
 <!-- easy-responsive-tabs -->    
 <link rel="stylesheet" type="text/css" href="template/css/easy-responsive-tabs.css " />
-<script src="template/js/easyResponsiveTabs.js"></script>
+<script src="js/easyResponsiveTabs.js"></script>
 <!-- //easy-responsive-tabs --> 
     <!-- here stars scrolling icon -->
             <script type="text/javascript">

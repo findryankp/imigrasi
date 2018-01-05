@@ -1,9 +1,6 @@
 <script src="http://maps.google.com/maps/api/js"></script>
-<div class="container">
-    <div class="text_center" style="margin: 13vh;">
-        <div id="map"></div>
-    </div>
-</div>
+
+<div id="map"></div>
 <!-- {!! Mapper::render() !!} -->
 
 <script>

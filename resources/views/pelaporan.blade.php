@@ -18,11 +18,10 @@
 @stop
 
 @section('content')
-
-@include('map')
    <div class="categories-section main-grid-border" id="mobilew3layouts">
         <div class="container">
             <div class="category-list">
+                
                 <div id="parentVerticalTab">
                     <div class="agileits-tab_nav">
                     <ul class="resp-tabs-list hor_1">
@@ -61,9 +60,9 @@
                                 <h4 id="lokasi2"></h4>
                                 <input type="hidden" id="tel" name="lokasi" placeholder="Lokasi">
                                 <div id="ketlokasi">
-                                    <input type="text" id="tel" name="ketlok"  placeholder="Keterangan Lokasi" required="required" />
+                                    <input type="text" id="tel" name="ketlok"  placeholder="Detail lokasi" required="required" />
                                 </div>
-                                <button type="button" id="button1" class="btn btn-info">
+                                <button type="button" id="button1" class="btn btn-info" data-toggle="modal" data-target="#myModal1">
                                     <span class="glyphicon glyphicon-search"></span> Cari lokasi
                                 </button>
                             </li>
@@ -78,6 +77,10 @@
                             <li>
                                 <input style="color: black;" type="submit" class="submit" value="Laporkan" />
                             </li>
+
+                            <li>
+                                @include('map')
+                            </li>
                         </ol>
                         </form> 
                                                                                             
@@ -85,11 +88,14 @@
 
                     </div>
                 </div>
-            
+                
+
             <div class="clearfix"> </div>
         </div>
 
     <!-- script -->
+
+        
         <script>
             $(document).ready(function() {
 
@@ -106,7 +112,7 @@
                 $("#map").hide();
                 $('#ketlokasi').hide();
                 $('#button1').click(function(){
-                    $('#map').toggle();
+                    $('#map').show();
                 });
                 $(".tabs-menu a").click(function(event){
                     event.preventDefault();
