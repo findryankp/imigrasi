@@ -1,8 +1,9 @@
-<div id="floating-panel">
-    <input id="submit_lokasi" type="button" value="Reverse Geocode">
-</div>
 <script src="http://maps.google.com/maps/api/js"></script>
-<div id="map"></div>
+<div class="row">
+    <div class="col-md-2 col-md-offset-5">
+        <div id="map"></div>
+    </div>
+</div>
 <!-- {!! Mapper::render() !!} -->
 
 <script>
@@ -36,7 +37,7 @@
         var geocoder = new google.maps.Geocoder;
         var infowindow = new google.maps.InfoWindow;
 
-        document.getElementById('submit_lokasi').addEventListener('click', function() 
+        document.getElementById('button1').addEventListener('click', function() 
         {
           geocodeLatLng(geocoder, map, infowindow, lati, longi);
           
@@ -77,9 +78,9 @@
               map: map
             });
             infowindow.setContent(results[0].formatted_address);
-            
 
             infowindow.open(map, marker);
+<<<<<<< HEAD
 <<<<<<< HEAD
             var alamat_len=results[0].address_components.length;
             console.log(results[0].address_components[0].short_name);
@@ -93,12 +94,20 @@
             var alamat_=""
 >>>>>>> Stashed changes
 >>>>>>> 2ce983c2c319ae9ad7c1c7b2cbffcdba7b32e6a7
+=======
+
+            var alamat_len=results[0].address_components.length;
+            console.log(results[0].address_components[0].short_name);
+            var alamat_=""
+
+>>>>>>> master
             for (var i=0;i<alamat_len-2;i+=1){
               if (i==alamat_len-3)
                   alamat_+=results[0].address_components[i].short_name
               else    
                   alamat_+=results[0].address_components[i].short_name+", "
             }
+<<<<<<< HEAD
 <<<<<<< HEAD
             console.log(alamat_);
             console.log(typeof alamat_);
@@ -110,6 +119,15 @@
             $('#lokasi').val(alamat_);
 >>>>>>> Stashed changes
 >>>>>>> 2ce983c2c319ae9ad7c1c7b2cbffcdba7b32e6a7
+=======
+
+            console.log(alamat_);
+            console.log(typeof alamat_);
+            $('#lokasi').val(alamat_);
+            $('#lokasi2').empty();
+            $('#lokasi2').append(alamat_);
+            $('#ketlokasi').show();
+>>>>>>> master
           } 
           else 
           {
