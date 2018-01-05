@@ -59,7 +59,7 @@
                             <li>
                                 <h4><i class="fa fa-map-marker fa-1x" aria-hidden="true" style="color:#00CED1"></i>&nbsp;&nbsp;Lokasi</h4>
                                 <h4 id="lokasi2"></h4>
-                                <input type="hidden" id="tel" name="lokasi" placeholder="Lokasi">
+                                <input type="hidden" id="lokasi" name="lokasi" placeholder="Lokasi">
                                 <div id="ketlokasi">
                                     <input type="text" id="tel" name="ketlok"  placeholder="Keterangan Lokasi" required="required" />
                                 </div>

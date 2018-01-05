@@ -43,7 +43,13 @@ class DataPelaporanController extends Controller
         $foto=$request->file('foto');
         $filename=time().".".$foto->getClientOriginalExtension();
         Image::make($foto)->save(public_path('/uploads/resources/'.$filename));
-        DataPelaporan::create($request->all());
+        DataPelaporan::create([
+                'keterangan'=>$request->keterangan,
+                'lokasi'=>$request->lokasi,
+                'ketlok'=>$request->ketlok,
+                'noTelp'=>$request->noTelp,
+                'foto'=>$filename,
+            ]);
         return view('pelaporan');
     }
 
