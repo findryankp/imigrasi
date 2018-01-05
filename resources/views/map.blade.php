@@ -1,6 +1,6 @@
 <script src="http://maps.google.com/maps/api/js"></script>
-<div class="row">
-    <div class="col-md-2 col-md-offset-5">
+<div class="container">
+    <div class="text_center">
         <div id="map"></div>
     </div>
 </div>

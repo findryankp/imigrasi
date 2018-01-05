@@ -63,7 +63,7 @@
                                 <div id="ketlokasi">
                                     <input type="text" id="tel" name="ketlok"  placeholder="Keterangan Lokasi" required="required" />
                                 </div>
-                                <input id="button1" type="button" value="Cek Lokasi">
+                                <input id="tel" type="button" value="Cek Lokasi">
                             </li>
                             <li>
                                 <h4><i class="fa fa-pencil-square-o" aria-hidden="true" style="color:#00CED1"></i>&nbsp;&nbsp;Keterangan</h4>
