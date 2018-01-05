@@ -43,7 +43,7 @@
                             <li class="text-right">
                                 <label>
                                     <i class="icon fa fa-camera fa-2x" style="color:#00CED1;">&nbsp;&nbsp;&nbsp;&nbsp;</i>
-                                    <input class="submit" type="file" name="foto" accept="image/*" capture="camera" hidden>
+                                    <input id="myFile" class="submit" type="file" name="foto" accept="image/*" capture="camera" hidden>
                                 </label>
                                 <h4 id="camera" class="">Ambil gambar</h4>
                             </li>
@@ -63,7 +63,9 @@
                                 <div id="ketlokasi">
                                     <input type="text" id="tel" name="ketlok"  placeholder="Keterangan Lokasi" required="required" />
                                 </div>
-                                <input id="button1" type="button" value="Cek Lokasi">
+                                <button type="button" id="button1" class="btn btn-info">
+                                    <span class="glyphicon glyphicon-search"></span> Cari lokasi
+                                </button>
                             </li>
                             <li>
                                 <h4><i class="fa fa-pencil-square-o" aria-hidden="true" style="color:#00CED1"></i>&nbsp;&nbsp;Keterangan</h4>
@@ -90,6 +92,14 @@
     <!-- script -->
         <script>
             $(document).ready(function() {
+
+                $('#myFile').change(function () {
+                    var search_id = $(this).val();
+                    var sump = $('#camera');
+                    sump.empty();
+                    sump.append(search_id);
+                });
+
                 $("#tab2").hide();
                 $("#tab3").hide();
                 $("#tab4").hide();
