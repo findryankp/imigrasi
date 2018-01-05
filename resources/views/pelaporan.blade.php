@@ -57,46 +57,15 @@
                                 </p>
                             </li>
                             <li>
-<<<<<<< HEAD
-                                <h4><i class="fa fa-pencil-square-o" aria-hidden="true" style="color:#00CED1"></i>&nbsp;&nbsp;Lokasi</h4>
-<<<<<<< HEAD
+                                <h4><i class="fa fa-map-marker fa-1x" aria-hidden="true" style="color:#00CED1"></i>&nbsp;&nbsp;Lokasi</h4>
                                 <h4 id="lokasi2"></h4>
                                 <input type="hidden" id="lokasi" name="lokasi" placeholder="Lokasi">
-=======
-                                <input type="text" id="lokasi" name="lokasi" placeholder="Lokasi">
-=======
-                            <li>
-                                <h4><i class="fa fa-pencil-square-o" aria-hidden="true" style="color:#00CED1"></i>&nbsp;&nbsp;Lokasi</h4>
-=======
-                                <h4><i class="fa fa-map-marker fa-1x" aria-hidden="true" style="color:#00CED1"></i>&nbsp;&nbsp;Lokasi</h4>
->>>>>>> master
-                                <h4 id="lokasi2"></h4>
-                                <input type="hidden" id="tel" name="lokasi" placeholder="Lokasi">
                                 <div id="ketlokasi">
                                     <input type="text" id="tel" name="ketlok"  placeholder="Keterangan Lokasi" required="required" />
                                 </div>
                                 <input id="button1" type="button" value="Cek Lokasi">
                             </li>
                             <li>
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-                                <h4><i class="fa fa-pencil-square-o" aria-hidden="true" style="color:#00CED1"></i>&nbsp;&nbsp;Keterangan Lokasi</h4>
->>>>>>> 2ce983c2c319ae9ad7c1c7b2cbffcdba7b32e6a7
-                                <input type="text" id="tel" name="ketlok"  placeholder="Keterangan Lokasi" required="required" />
-                            </li>
-
-                            <li class="text-right">
-                                <!-- <button type="button" class="submit">
-                                    <span style="color:black;" class="icon fa fa-camera"></span>
-                                </button> -->
-                                <input class="submit" type="file" name="foto" accept="image/*" capture="camera">
-                                <h4>Ambil gambar</h4>
-                            </li>
-
-
-=======
-=======
->>>>>>> master
                                 <h4><i class="fa fa-pencil-square-o" aria-hidden="true" style="color:#00CED1"></i>&nbsp;&nbsp;Keterangan</h4>
                                 <textarea style="opacity: 0.7;" name="keterangan" class="form-control" rows="3" placeholder="Tulis Keterangan"></textarea>
                                 <p class="validation01">
