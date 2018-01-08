@@ -21,6 +21,12 @@ Route::get('/coba', function () {
     return view('ceklaporan');
 });
 
+
+Route::get('/bisa', function () {
+    return view('bisa');
+});
+
+
 Route::get('/map','DataPelaporanController@index');
 
 Auth::routes();

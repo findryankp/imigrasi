@@ -27,8 +27,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <body >
 <header>
     <div class="container">
+
             <div class="logo">
-                <h1><a href="index.html">PELAPORAN ONLINE</a></h1>
+                <h1><img src="{!! asset('template/images/logo.PNG') !!}" alt="" height="50" width="50" />
+                    </a>
+                <a href="index.html" style="color: #FEE901;"><span style="color: white;">PELAPORAN </span>ONLINE</a></h1>
             </div>
           <!-- <div class="w3layouts-login">
                 <a data-toggle="modal" data-target="#myModal" href="#"><i class="glyphicon glyphicon-user"> </i>Login/Register</a>
@@ -194,10 +197,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <div class="w3l-footer-bottom">
         <div class="container-fluid">
             <div class="col-md-4 w3-footer-logo">
-                <h2><a href="index.html">PELAPORAN ONLINE</a></h2>
+                <h2><a href="index.html">IMIGRASI KEDIRI</a></h2>
             </div>
             <div class="col-md-8 agileits-footer-class">
-                <p >© 2017 Online Recharge. All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
+                <p >© 2017 Online Recharge. All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank" style="color:#FEE901;">Indonesia</a> </p>
             </div>
         <div class="clearfix"> </div>
         </div>
